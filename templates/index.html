@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counter</title>
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <p>You've been here {{session['counter']}} times</p>
+
+    <form name= clearcount action='/destroy_session' method='post'>
+        <input type='submit' value='Click to Reset'>
+    </form>
+
+    <form name= addtwobutton action='/addtwo' method='post'>
+        <input type='submit' value='Add two to the counter'>
+    </form>
+
+    <form action='/addamount' method='post'>
+        Add by: <input type='text' name='addby'>
+        <input type='submit' value='Add by this amount'>
+    </form>
+    
+</body>
+
+</html>
